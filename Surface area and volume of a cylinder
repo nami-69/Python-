@@ -1,0 +1,14 @@
+import math
+
+def cylinder(radius, height):
+volume = math.pi * (radius * radius) * height
+surface_area = 2 * math.pi * radius * (radius + height)
+return (volume, surface_area)
+
+radius = float(input("Enter radius: "))
+height = float(input("Enter height: "))
+
+vol, surface_area = cylinder(radius, height)
+
+print(f"Volume of the cylinder is {vol:.2f}")
+print(f"Surface area of the cylinder is {surface_area:.2f}")
