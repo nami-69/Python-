@@ -1,0 +1,10 @@
+first_num = int(input("Enter a number: "))
+sec_num = int(input("Enter a number: "))
+third_num = int(input("Enter a number: "))
+
+if first_num >= sec_num and first_num >= third_num:
+print("Largest number is:", first_num)
+elif sec_num >= third_num:
+print("Largest number is:", sec_num)
+else:
+print("Largest number is:", third_num)
