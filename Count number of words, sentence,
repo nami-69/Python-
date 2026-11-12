@@ -1,0 +1,26 @@
+word_count = symbol_count = lower_count = upper_count = 0
+special_char = "~!@#$%^&*-+;"
+invalid_char = [",", "\n", "\t"]
+
+with open("count-file.txt", "r") as file:
+  for line in file:
+    word_list = line.split()
+
+    for word in word_list:
+      if word in invalid_char:
+        continue
+
+      word_count += 1
+
+      for char in word:
+        if char.islower():
+          lower_count += 1
+        elif char.isupper():
+          upper_count += 1
+        elif char in special_char:
+          symbol_count += 1
+
+print(f"Word count:\t {word_count}")
+print(f"Lower count:\t {lower_count}")
+print(f"Upper count:\t {upper_count}")
+print(f"Symbol count:\t {symbol_count}")
