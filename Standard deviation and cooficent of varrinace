@@ -1,0 +1,19 @@
+import numpy as np
+
+classes = np.array([[0,10], [10,20], [20,30], [30,40], [40,50], [50,60], [60,70], [70,80]])
+freq = np.array([5, 10, 20, 40, 30, 20, 10, 5])
+
+midpoints = np.array([(c[0] + c[1]) / 2 for c in classes])
+N = np.sum(freq)
+
+Sum_fx = np.sum(freq * midpoints)
+Sum_fx2 = np.sum(freq * (midpoints ** 2))
+
+mean = Sum_fx / N
+variance = (Sum_fx2 / N) - (mean ** 2)
+sd = np.sqrt(variance)
+CV = (sd / mean) * 100
+
+print(f"Mean = {mean:.2f}")
+print(f"Standard Deviation = {sd:.2f}")
+print(f"Coefficient of Variation = {CV:.2f}%")
