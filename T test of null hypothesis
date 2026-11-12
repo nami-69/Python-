@@ -1,0 +1,21 @@
+import numpy as np
+from scipy import stats
+
+mean_mpg = 22
+std_dev = 4            
+sample_size = 16
+population_mean = 20
+
+t_stats = (mean_mpg - population_mean) / (std_dev / np.sqrt(sample_size))
+df = sample_size - 1
+
+critical_t = stats.t.ppf(1 - 0.025, df)
+
+print("t_statistics:", t_stats)
+print("Degree of freedom =", df)
+print("Critical t_value for P=0.05:", critical_t)
+
+if abs(t_stats) > critical_t:
+    print("Reject H0: mean mpg is not 20")
+else:
+    print("Fail to reject H0: mean mpg could be 20")
