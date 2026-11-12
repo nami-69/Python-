@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+
+x = ['a', 'b', 'c', 'd', 'e']
+y = [1, 2, 3, 4, 5]
+
+plt.bar(x, y)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Bar graph")
+plt.show()
