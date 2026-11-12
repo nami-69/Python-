@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+
+x = ['a', 'b', 'c', 'd', 'e']
+y = [1, 2, 3, 4, 5]
+
+plt.plot(x, y)
+
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Normal graph")
+
+plt.show()
