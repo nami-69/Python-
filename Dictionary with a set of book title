@@ -1,0 +1,29 @@
+books = {}
+
+n = int(input("Enter the number of books: "))
+for i in range(n):
+    title = input("Enter the book title: ")
+    stock = int(input("Enter the stock: "))
+    books[title] = stock
+
+print("Dictionary:", books)
+
+title = input("Enter the book title to update: ")
+if title in books:
+    stock = int(input("Enter new stock: "))
+    books[title] = stock
+else:
+    print("Book not found")
+
+title = input("Enter new book title: ")
+stock = int(input("Enter the stock: "))
+books[title] = stock
+
+title = input("Enter book title to delete: ")
+if title in books:
+    del books[title]
+else:
+    print("Book not found")
+
+print("Updated Dictionary:")
+print(books)
