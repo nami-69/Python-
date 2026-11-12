@@ -1,0 +1,23 @@
+
+lst = []
+
+n = int(input("Enter the number of elements: "))
+
+for i in range(n):
+    lst.append(int(input("Enter a number: ")))
+
+# Convert list to tuple
+t = tuple(lst)
+
+even = ()
+odd = ()
+
+for num in t:
+    if num % 2 == 0:
+        even = even + (num,)
+    else:
+        odd = odd + (num,)
+
+print("Original tuple:", t)
+print("Even tuple:", even)
+print("Odd tuple:", odd)
