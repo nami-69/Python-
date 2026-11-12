@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+
+bins = ['135-140', '140-145', '145-150', '150-155']
+counts = [4, 12, 16, 8]
+
+plt.bar(bins, counts, width=1.0, color='skyblue', edgecolor='black')
+
+plt.title('Histogram of student heights')
+plt.xlabel('Height')
+plt.ylabel('Number of students')
+
+plt.show()
