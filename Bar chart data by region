@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+
+x = ['Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America', 'Soviet Union']
+y = [11.7, 10.4, 4.1, 9.4, 3.5, 6.9, 7.9]
+
+plt.bar(x, y)
+plt.xlabel("Region")
+plt.ylabel("Value")
+plt.title("Data by Region")
+plt.show()
