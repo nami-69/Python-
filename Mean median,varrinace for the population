@@ -1,0 +1,16 @@
+import numpy as np
+
+State = ["Alabama", "Alaska", "Arizona", "Arkansas", "California",
+         "Colorado", "Connecticut", "Delaware"]
+Population = [4177936, 1023160, 6392017, 2815918, 37123956,
+              4503201, 908740, 859924]
+
+Population_mean = np.mean(Population)
+
+Population_median = np.median(Population)
+
+Population_variance = np.var(Population, ddof=0)
+
+print(f"Population Mean: {Population_mean}")
+print(f"Population Median: {Population_median}")
+print(f"Population Variance: {Population_variance}")
