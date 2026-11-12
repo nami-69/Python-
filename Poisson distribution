@@ -1,0 +1,7 @@
+import math
+
+Lambda = 3.4
+K = 6
+
+P_X_6 = (math.exp(-Lambda)) * (Lambda**K) / math.factorial(K)
+print("P(X=6) = ", P_X_6)
