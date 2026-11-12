@@ -1,0 +1,17 @@
+import numpy as np
+from scipy.stats import chi2_contingency
+
+Observed = np.array([[60, 54, 46], [40, 46, 53]])
+chi2, p, dof, expected = chi2_contingency(Observed)
+
+print("Chi Square Statistics =", chi2)
+print("p-value =", p)
+print("Degrees of freedom =", dof)
+print("Expected frequency =\n", expected)
+
+alpha = 0.05
+
+if p > alpha:
+    print("Fail to reject null hypothesis: gender and education are independent")
+else:
+    print("Reject null hypothesis: gender and education are dependent")
