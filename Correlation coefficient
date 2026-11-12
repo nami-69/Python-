@@ -1,0 +1,20 @@
+hand = [17, 15, 19, 17, 21]
+height = [150, 154, 169, 172, 175]
+
+num = len(hand)
+mean_hand = sum(hand) / num
+mean_height = sum(height) / num
+
+cov = 0
+var_hand = 0
+var_height = 0
+
+for i in range(num):
+    hand_diff = hand[i] - mean_hand
+    height_diff = height[i] - mean_height
+    cov += hand_diff * height_diff
+    var_hand += hand_diff ** 2
+    var_height += height_diff ** 2
+
+cor_coeff = cov / ((var_hand ** 0.5) * (var_height ** 0.5))
+print("Correlation Coefficient :", cor_coeff)
