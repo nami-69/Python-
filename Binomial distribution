@@ -1,0 +1,15 @@
+import math
+
+def binomial_pmf(n, k, p):
+    q = 1 - p
+    comb = math.factorial(n) // (math.factorial(k) * math.factorial(n - k))
+    return comb * (p ** k) * (q ** (n - k))
+
+N = 10  
+P = 0.25
+
+Prob_4 = binomial_pmf(N, 4, P)
+Prob_atleast1 = 1 - binomial_pmf(N, 0, P)
+
+print("P(X=4) =", Prob_4)
+print("P(X>=1) =", Prob_atleast1)
