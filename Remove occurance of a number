@@ -1,0 +1,10 @@
+numbers = [2, 4, 2, 5, 2, 7]
+
+n = int(input("Enter the number to remove: "))
+new_list = []
+
+for i in numbers:
+    if i != n:
+        new_list.append(i)
+
+print("Updated list:", new_list)
